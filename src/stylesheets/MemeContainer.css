@@ -47,4 +47,8 @@
     .meme-container h3 {
         font-size: 38px;
     }
+
+    .line-top, .line-bottom {
+        font-size: 22px;
+    }
 }
