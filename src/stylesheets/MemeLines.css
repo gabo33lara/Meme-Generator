@@ -1,0 +1,44 @@
+.meme-lines-container {
+    margin-bottom: 30px;
+}
+
+.meme-lines-container input {
+    width: 500px;
+    height: 50px;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.meme-lines-container button {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #8db600;
+    width: 230px;
+    height: 60px;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.pointer-none {
+    pointer-events: none;
+}
+
+.meme-lines-container button:hover {
+    color: #313131;
+    background: #c8f902;
+}
+
+@media (min-width: 320px) and (max-width: 598px) {
+    .meme-lines-container input {
+        width: 100%;
+    }
+}

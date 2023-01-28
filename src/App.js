@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import MemeLines from './components/MemeLines';
+import {useState} from 'react';
+import MemeContainer from "./components/MemeContainer";
+import MemeSelect from "./components/MemeSelect";
 import './App.css';
 
 function App() {
+  const [memeImg, setImage] = useState('select-meme');
+  const [memeLineTop, setMemeLineTop] = useState('');
+  const [memeLineBottom, setMemeLineBottom] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MemeSelect selecetImg={setImage} />
+      <MemeLines onChangeLineTop={setMemeLineTop} onChangeLineBottom={setMemeLineBottom} isEmptyImg={memeImg} />
+      <MemeContainer memeLineTop={memeLineTop} memeLineBottom={memeLineBottom} memeImg={memeImg} />
     </div>
   );
 }
